@@ -1,0 +1,9 @@
+
+
+FROM scratch AS export-stage
+
+ARG ARCH=x86_64
+ARG VERSION=0.7.5
+ARG DIST_FILE=tmsu-${ARCH}-${VERSION}.tgz
+
+COPY --from=build-stage /TMSU/${DIST_FILE} .

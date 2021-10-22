@@ -1,4 +1,4 @@
-ARG BASE_IMAGE=golang:1.15.15-buster
+ARG BASE_IMAGE=golang:1.15.15-stretch
 
 FROM ${BASE_IMAGE} AS build-stage
 
@@ -30,7 +30,7 @@ WORKDIR /TMSU
 RUN make && make install
 
 
-FROM debian:buster AS prod
+FROM debian:stretch AS prod
 
 # Container variables
 ENV \

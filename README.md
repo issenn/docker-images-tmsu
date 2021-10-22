@@ -8,7 +8,11 @@ Build TMSU from source and use it from a docker container.
 
 ```sh
 git clone git@github.com:issenn/docker-images-tmsu.git
-cd docker-images-tmsu/0.7/buster && docker build --build-arg HTTP_PROXY="socks5://10.0.0.131:10808" --build-arg HTTPS_PROXY="socks5://10.0.0.131:10808" -t tmsu:0.7.5-buster .
+cd docker-images-tmsu/0.7/buster && \
+    docker build \
+        --build-arg HTTP_PROXY="socks5://10.0.0.131:10808" \
+        --build-arg HTTPS_PROXY="socks5://10.0.0.131:10808" \
+        -t tmsu:0.7.5-buster .
 ```
 
 #### Alias
